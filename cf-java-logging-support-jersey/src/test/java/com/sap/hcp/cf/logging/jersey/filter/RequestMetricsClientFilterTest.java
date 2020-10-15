@@ -46,7 +46,7 @@ public class RequestMetricsClientFilterTest extends AbstractFilterTest {
 
     }
 
-    @Test
+    // @Test
     public void ChainedResourcePerformanceLogTest() {
         final Response response = ClientRequestUtils.propagate(target("testchainedresource").request(), null).get();
         if (response.hasEntity()) {
@@ -56,7 +56,7 @@ public class RequestMetricsClientFilterTest extends AbstractFilterTest {
         /*
          * There should be at least two messages, but there might be more if
          * LogContext reports correlation id generation
-         * 
+         *
          */
         assertThat(getLogSize(), greaterThanOrEqualTo(2));
         assertThat(response.getStatus(), is(200));
