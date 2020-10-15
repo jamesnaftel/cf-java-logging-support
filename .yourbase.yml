@@ -36,6 +36,7 @@ build_targets:
   - name: default
     environment:
       - YB_DEBUG=true
+      - SKIPPER_IGNORE=mvn clean package
     commands:
       - mvn clean package
 
